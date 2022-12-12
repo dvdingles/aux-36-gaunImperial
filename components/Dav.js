@@ -6,7 +6,7 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Dav(props) {
-  const { nodes, materials } = useGLTF("/3D KIT IMPERIAL.gltf");
+  const { nodes, materials } = useGLTF("/4D KIT IMPERIAL.gltf");
   return (
     <group {...props} dispose={null}>
       <group position={[0.01, 0.1, 0]} rotation={[0, Math.PI / 2, 0]}>
@@ -33,4 +33,4 @@ export function Dav(props) {
   );
 }
 
-useGLTF.preload("/3D KIT IMPERIAL.gltf");
+useGLTF.preload("/4D KIT IMPERIAL.gltf");
