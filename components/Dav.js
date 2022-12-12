@@ -6,26 +6,26 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Dav(props) {
-  const { nodes, materials } = useGLTF("/BODEGA.gltf");
+  const { nodes, materials } = useGLTF("/3D KIT IMPERIAL.gltf");
   return (
     <group {...props} dispose={null}>
-      <group position={[0, -0.01, 0]} rotation={[Math.PI / 2, 0, -Math.PI]}>
+      <group position={[0.01, 0.1, 0]} rotation={[0, Math.PI / 2, 0]}>
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes["TQ_ARD-geom"].geometry}
+          geometry={nodes["TQ_ARD-geom001"].geometry}
           material={materials.TQ_ARD_front}
         />
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes["TQ_ARD-geom_1"].geometry}
+          geometry={nodes["TQ_ARD-geom001_1"].geometry}
           material={materials.TQ_ARD_back}
         />
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes["TQ_ARD-geom_2"].geometry}
+          geometry={nodes["TQ_ARD-geom001_2"].geometry}
           material={materials.TQ_ARD_edge}
         />
       </group>
@@ -33,4 +33,4 @@ export function Dav(props) {
   );
 }
 
-useGLTF.preload("/BODEGA.gltf");
+useGLTF.preload("/3D KIT IMPERIAL.gltf");
